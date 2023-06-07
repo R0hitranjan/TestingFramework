@@ -38,6 +38,7 @@ public class BaseClass {
 	@AfterMethod
 	public void teardownMethod(ITestResult result) {
 		if(result.getStatus()==ITestResult.FAILURE || result.getStatus()==ITestResult.SUCCESS) {
+			//this takes the screenshot
 			Helper.captureScreenshot(driver);
 		}
 	}
